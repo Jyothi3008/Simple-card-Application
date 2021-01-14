@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+   <section>
+       <header>
+            <div class="container">
+                <a href="#">LOGO</a>
+            </div>
+       </header>
+       <div class="search">
+            <input type="text" id="search" class="form-control search" onkeyup="getSearchEmployeeDetails()" placeholder="Employee Record Search">
+            <i class="fas fa-search"></i>
+        </div>
+       <div class="main-card-section">
+           <div class="container">
+               <div id="card-section" class="row">
+               </div>
+           </div>
+       </div>
+       <button type="button" class="btn btn-primary usercreate" onclick="newUserPopUp()" data-toggle="modal" data-target="#createNewUser">
+           <i class="fas fa-user-plus"></i>
+       </button>
+       <!-- Modal -->
+       <div class="modal fade" id="createNewUser" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+           aria-hidden="true">
+           <div class="modal-dialog" role="document">
+               <div class="modal-content">
+                   <div class="modal-header">
+                        <h5 class="modal-title" id="createModalLabel">New Employee Form</h5>
+                        <h5 class="modal-title" id="updateModalLabel">Update Employee Form</h5>
+                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                           <span aria-hidden="true">&times;</span>
+                       </button>
+                   </div>
+                   <div class="modal-body">
+                      <form id ="form-reset">
+                        <div class="form-group">
+                            <label for="fullName">Employee Name</label>
+                            <input type="text" class="form-control" id="fname" placeholder="Enter Employee Full Name">
+                            <p id="fnameError" class="error"></p>
+                        </div>
+                        <div class="form-group">
+                            <label for="id">Employee ID</label>
+                            <input type="text" class="form-control" id="eid" placeholder="Enter Employee ID">
+                            <p id="eidError" class="error"></p>
+                        </div>
+                        <div class="form-group">
+                            <label for="employeeDepartment">Employee Department</label>
+                            <select class="form-control" id="edept">select Employee Department
+                                <option value="Software Development">Software Development</option>
+                                <option value="Shipping">Shipping</option>
+                                <option value="Ceramics">Ceramics</option>
+                                <option value="Production">Production</option>
+                            </select>
+                            <p id="edeptError" class="error"></p>
+                        </div>
+                        <div class="form-group">
+                            <label for="employeeLocation">Employee Location</label>
+                            <select class="form-control" id="eloc">
+                                <option value="Hudson">Hudson</option>
+                                <option value="Stow">Stow</option>
+                                <option value="Twinsburg">Twinsburg</option>
+                                <option value="StreetsBoro">StreetsBoro</option>
+                                <option value="Akron">Akron</option>
+                            </select>
+                            <p id="elocError" class="error"></p>
+                        </div>
+                        <div class="form-group">
+                            <label for="fullName">Employee Profile URL</label>
+                            <input type="text" class="form-control" id="eprofile" placeholder="Enter Employee Profile Url">
+                            <p id="eprofileError" class="error"></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary user-update" onclick="userUpdateDetails()">Update</button>
+                            <button type="button" class="btn btn-primary user-save" onclick="getUserDetails()">Save changes</button>
+                        </div>
+                      </form>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </section>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <script src="main.js"></script>
+</body>
+</html>

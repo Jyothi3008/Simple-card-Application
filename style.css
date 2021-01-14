@@ -1,0 +1,526 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+header {
+    background-color: #002d73;
+    color: white;
+    padding: 15px 0;
+    font-weight: 600;
+}
+
+div#card-section {
+    margin-top: 50px;
+}
+
+.container a {
+    text-decoration: none;
+    color: white;
+    padding-top: 10px;
+}
+
+.card {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+h5.card-title {
+    font-size: 18px;
+}
+
+span.card-title {
+    font-size: 13px;
+}
+
+span.card-title i {
+    margin-right: 5px;
+}
+
+span.card-title {
+    color: #a09d9d;
+    font-style: italic;
+}
+
+span.card-title.loc {
+    float: right;
+}
+
+span.card-title.loc i {
+    color: #c3230c;
+}
+
+.card-title {
+    margin-bottom: .75rem;
+    color: #002d73;
+}
+
+span.card-title.dept i {
+    color: #002d73;
+}
+
+.card figure {
+    margin: 0;
+    position: relative;
+}
+
+.card figure:before {
+    position: absolute;
+    background-color: #1b1818;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    content: "";
+    opacity: 0
+}
+
+.card:hover.card figure:before {
+    opacity: 0.5;
+}
+
+
+button.delete,
+button.update,
+button.user-profile {
+    /* float: right; */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    border-radius: 50%;
+    padding: 10px 12px;
+    border: none;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: right 0.3s linear;
+}
+
+button.delete {
+    background-color: #cf0a2c;
+    color: white;
+}
+
+button.update {
+    right: 60px;
+    background-color: #002d73;
+    color: white;
+}
+
+button.user-profile {
+    right: 90px;
+    background-color: white;
+    color: #002d73;
+    padding: 10px 15px;
+
+}
+
+
+.card:hover button.delete,
+.card:hover button.update,
+.card:hover button.user-profile {
+    opacity: 1;
+    right: 20px;
+}
+
+.card:hover button.update {
+    right: 70px;
+
+}
+
+.card:hover button.user-profile {
+    right: 120px;
+
+}
+
+button.btn.btn-primary.usercreate {
+    border-radius: 50%;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+button.delete i {
+    pointer-events: none;
+}
+
+button.user-profile i {
+    pointer-events: none;
+}
+
+
+
+
+/* search */
+.search {
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+.search i {
+    display: inline-block;
+}
+
+.form-control.search {
+    display: inline-block;
+    width: 80%;
+}
+
+.search i {
+    display: inline-block;
+    background-color: #002d73;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    margin-left: -21px;
+    font-size: 31px;
+}
+
+button.btn.btn-primary.user-update {
+    display: none;
+}
+
+button.update-user.update i {
+    pointer-events: none;
+}
+
+.update-user-popup.show #eid {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+
+.update-user-popup.show button.user-update,
+.update-user-popup.show #updateModalLabel,
+.update-user-popup.show #eid {
+    display: block;
+}
+
+.update-user-popup.show button.user-save,
+.update-user-popup.show #createModalLabel,
+.user-update,
+#updateModalLabel {
+    display: none;
+}
+
+.error {
+    display: block;
+    color: red;
+    font-style: italic;
+}
+
+.control-error {
+    border-color: red;
+}
+
+
+@media (max-width:767px) {
+    div#card-section .col-4 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.333333%;
+        flex: 100%;
+        max-width: 100%;
+    }
+
+    .search {
+        width: 445px;
+        margin: 20px auto;
+        padding: 0 30px;
+    }
+
+}
+
+
+/* Profile Page */
+
+
+h1#empName {
+    color: #002d73;
+    font-style: italic;
+}
+
+section#main-section {
+    min-height: 250px;
+    background-image: url(https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.avatar-img-section {
+    width: 300px;
+    margin: 0 auto;
+    top: -34px;
+    left: 0;
+    right: 0;
+    position: relative;
+    text-align: center;
+}
+
+.social-media span i {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    font-size: 25px;
+    padding-top: 7px;
+    /* padding-right: 0px; */
+}
+
+p#empDept {
+    text-align: center;
+    font-style: italic;
+}
+
+i.fab.fa-facebook-f {
+    color: #3b579d;
+}
+
+i.fab.fa-twitter {
+    color: #2aa8e0;
+}
+
+i.fab.fa-linkedin-in {
+    color: #0077b5;
+}
+
+.brief-section {
+    text-align: center;
+}
+
+
+
+/*signin form */
+
+.signup-section {
+    margin: 0 auto;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+form.signup-form {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.descrip {
+    text-align: center;
+    z-index: 9999;
+    color: white;
+}
+
+.descrip h1 {
+    font-size: 40px;
+    color: #a09d9d;
+    padding-bottom: 15px;
+}
+.descrip p {
+    font-style: italic;
+    color: #a09d9d;
+}
+
+form.signup-form h1 {
+    padding-bottom: 20px;
+}
+.col-5.bg-image {
+    background-size: cover;
+    background-image: url(https://images.unsplash.com/photo-1578593089381-98e8e66f0819?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=620&q=80);
+    background-repeat: no-repeat;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+}
+
+.row.sign-up-row {
+    min-height: 700px;
+    z-index: 999;
+}
+.col-7.sign-up-content {
+    display: flex;
+    align-items: center;
+    background-color: white;
+}
+.log-sec {
+    z-index: 999;
+    margin: 0 auto;
+    
+}
+a.logo {
+    margin: 0 auto;
+    z-index: 9999;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.blur-section {
+    height: 100vh;
+    width: 100%;
+    background-image: url(https://images.unsplash.com/photo-1578589591337-864142c03335?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);
+    background-size: cover;
+    filter: blur(6px);
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+
+}
+
+.row.sign-up-row {
+    min-height: 700px;  
+}
+
+.signup-section .container {
+    border-radius: 30px;
+    overflow: hidden;
+}
+.col-5.bg-image:before{
+    content:"";
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    position: absolute;
+    background-image:linear-gradient(45deg, black, black);
+    opacity:0.8;
+}
+
+button.btn.btn-primary.signup {
+    color: #fff;
+    background-color: #1f1c1b;
+    border-color: #1f1c1b;
+}
+
+.signup-form.form-control {
+    border: 1px solid #e9ebec;
+   
+}
+
+.signup-form p.error {
+    display: block;
+    color: red;
+    font-style: italic;
+    font-size: 13px;
+}
+
+
+
+/* Login page */ 
+
+
+section.main-login-section {
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #ecedef;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-form {
+    height: 600px;
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 20px;
+    background-image: url(https://wallpaperplay.com/walls/full/6/c/7/205644.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position:relative;
+}
+.login-form:before{
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    background-image: linear-gradient(30deg, white,white);
+    opacity: 0.3;
+
+}
+
+    
+
+span i.fas.fa-users {
+    font-size: 96px;
+    color: #64414b;
+    padding-bottom: 20px;
+}
+
+form.login-form-sec .form-control {
+    position: relative;
+}
+
+form.login-form-sec .form-group {
+    position: relative;
+}
+span i.far.fa-envelope,
+span i.far.fa-key {
+    /* float: right; */
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 25px;
+    font-weight: 600;
+    color: #452735;
+}
+
+button.login-btn {
+    width: 235px;
+    color: white;
+    background-color: #64414b;
+    border-color: #64414b;
+}
+
+
+
+
+/* Thanks Page */
+section.main-thanks-section {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.thank-you-section {
+    height: 500px;
+    width: 600px;
+    background-image: url(https://images.unsplash.com/photo-1549032305-e816fabf0dd2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+    background-size: cover;
+    margin: 0 auto;
+    position:relative;
+    
+}
+
+.content-sec {
+    position: absolute;
+    bottom: 25px;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    width:100%;   
+}
+
+button.login-navigate {
+    width: 100px;
+    margin: 0 auto;
+    background-color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
